@@ -1,0 +1,32 @@
+{{> navbar}}
+<div class="container">
+    <h1>Список постов</h1>
+    <div class="row">
+        {{#each posts}}
+        <div data-post="{{_id}}" class="post-card col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    {{#if titleImg}}
+                    <img src="/{{titleImg}}">
+                    {{else}}
+                    <img src="/img/defaul.jpg">
+                    {{/if}}
+                    <span class="card-title">{{title}}</span>
+                    <span class="card-date">{{date}}</span>
+                </div>
+                <div class="card-content">
+                    <h4>Автор: <span>{{user.login}}</span></h4>
+                    <p>{{text}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="/post/{{_id}}">Читать далее...</a>
+                    {{#if @root.userPost}}
+                    <a class="waves-effect waves-light btn" href="/edit/{{_id}}">Редактировать</a>
+                    <button data-delElem="{{_id}}" class="post-btn btn waves-effect red" type="submit" name="action">Удалить</button>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>   
+</div>

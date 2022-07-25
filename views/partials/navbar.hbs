@@ -1,0 +1,46 @@
+
+<nav>
+    <div class="nav-wrapper teal darken-2">
+        <a href="/" class="brand-logo">My BLOG</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#if isHome}}
+            <li class="active">
+                <a href="/">Главная</a>
+            </li>
+            {{else}}
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            {{/if}}
+            {{#if isAuth}}
+                {{#if isPost}}
+                <li class="active">
+                    <a href="/add-post">Добавить пост</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="/add-post">Добавить пост</a>
+                </li>
+                {{/if}}
+                {{#if userPost}}
+                <li class="active">
+                    <a href="/user-posts">Мои посты</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="/user-posts">Мои посты</a>
+                </li>
+                {{/if}}
+
+                <li>
+                    <a href="/auth/logout">Выход</a>
+                </li>
+            {{else}}
+                <li>
+                    <a href="/auth">Вход</a>
+                </li>
+            {{/if}}
+
+        </ul>
+    </div>
+</nav>

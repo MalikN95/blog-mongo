@@ -1,0 +1,31 @@
+.nav-wrapper{
+    padding: 0 35px;
+}
+
+.auth{
+    padding-top: 50px;
+}
+.auth-form{
+    margin-top: 40px;
+}
+.add-post{
+    margin-top: 50px;
+}
+h4{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 17px;
+}
+.card-date{
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+}
+
+.card-image img{
+    object-fit: cover;
+    max-height: 345px;
+}
