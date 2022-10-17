@@ -16,7 +16,7 @@ const authRoutes = require('./routes/auth.routes')
 const userPostsRoutes = require('./routes/user-posts.routes')
 
 
-const MONGODB_URI = `mongodb+srv://malikN:root@cluster0.ttgagmc.mongodb.net/?retryWrites=true&w=majority`
+const MONGODB_URI = `mongodb+srv://malikN:Qwe-1995@cluster0.ttgagmc.mongodb.net/?retryWrites=true&w=majority`
 
 // Handlebars settings
 const hbs = exphbs.create({
