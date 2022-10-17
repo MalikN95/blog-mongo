@@ -16,7 +16,7 @@ const authRoutes = require('./routes/auth.routes')
 const userPostsRoutes = require('./routes/user-posts.routes')
 
 
-const MONGODB_URI = `mongodb+srv://malikN:root@cluster0.ttgagmc.mongodb.net/test`
+const MONGODB_URI = `mongodb+srv://malikN:root@cluster0.ttgagmc.mongodb.net/?retryWrites=true&w=majority`
 
 // Handlebars settings
 const hbs = exphbs.create({
@@ -59,6 +59,10 @@ const PORT = process.env.PORT || 3000
 async function start(){
     try{
        
+        await mongoose.connect(MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
         
         app.listen(PORT, () => {
             console.log(`Server start on ${PORT} port`);
@@ -69,4 +73,3 @@ async function start(){
 }
 
 start()
-
